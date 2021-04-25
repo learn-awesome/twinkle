@@ -1,0 +1,24 @@
+{
+    "name": "twinklecss",
+    "version": "1.3.0",
+    "description": "JIT build of Tailwind CSS 2.1.2 with autoprefixer, Inter font, and plugins like aspect-ratio/forms/typography/line-clamp",
+    "main": "index.js",
+    "scripts": {
+        "css:build": "TAILWIND_MODE=build postcss my.css -o ../learn/public/twinkle-new.min.css --verbose && ls -S -lh ../learn/public/twinkle-new.min.css | awk '{print \"Size: \" $5}'",
+        "css:watch": "TAILWIND_MODE=watch postcss my.css -o ../learn/public/twinkle-new.min.css --verbose --watch"
+    },
+    "author": "Nilesh Trivedi",
+    "license": "MIT",
+    "devDependencies": {
+        "@tailwindcss/aspect-ratio": "^0.2.0",
+        "@tailwindcss/forms": "^0.3.2",
+        "@tailwindcss/line-clamp": "^0.2.0",
+        "@tailwindcss/typography": "^0.4.0",
+        "autoprefixer": "^10.2.5",
+        "cssnano": "^5.0.1",
+        "postcss": "^8.2.12",
+        "postcss-cli": "^8.3.1",
+        "postcss-nested": "^5.0.5",
+        "tailwindcss": "^2.1.2"
+    }
+}
